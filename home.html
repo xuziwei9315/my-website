@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>數位履歷</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h1>個人網站</h1>
+  </header>
+
+  <div class="container">
+    <aside id="sidebar" class="sidebar">
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="大頭貼" class="avatar">
+            <h2>王小明</h2>
+            <p>輔仁大學 資訊管理學系</p>
+        </div>
+
+        <div class="clover-container">
+        <button class="clover-leaf" onclick="showPage('home')" title="首頁">💚</button>
+        <button class="clover-leaf" onclick="showPage('about')" title="關於我">💚</button>
+        <button class="clover-leaf" onclick="showPage('projects')" title="作品集">💚</button>
+        <button class="clover-leaf" onclick="showPage('about')" title="關於我">💚</button>
+        </div>
+
+
+            <script>
+            function leafClicked(num) {
+            alert(`你點擊了葉片 ${num}`);
+            }
+
+            const leaves = document.querySelectorAll('.clover-leaf');
+            leaves.forEach((leaf) => {
+            leaf.addEventListener('click', () => {
+                leaves.forEach(l => l.classList.remove('active'));
+                leaf.classList.add('active');
+            });
+            });
+            </script>
+
+
+    </aside>
+
+
+    <main id="content">
+      <section id="home" class="page active">
+        <h2>歡迎來到我的履歷網站</h2>
+        <p>這裡展示我的經歷、專案與聯絡方式。</p>
+      </section>
+
+      <section id="about" class="page">
+        <h2>關於我</h2>
+        <p>我是一位熱愛開發的資管系學生，具備 HTML、Python 基礎。</p>
+      </section>
+
+      <section id="projects" class="page">
+        <h2>作品集</h2>
+        <ul>
+          <li>詐騙檢測系統 (Python + Firebase)</li>
+          <li>靜態履歷網站 (GitHub Pages)</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="page">
+        <h2>聯絡我</h2>
+        <p>Email: example@gmail.com</p>
+        <p>GitHub: github.com/yourname</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
