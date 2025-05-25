@@ -16,60 +16,95 @@
     <aside id="sidebar" class="sidebar">
         <div class="profile">
             <img src="https://via.placeholder.com/100" alt="大頭貼" class="avatar">
-            <h2>王小明</h2>
+            <h2>徐子崴</h2>
             <p>輔仁大學 資訊管理學系</p>
         </div>
-
         <div class="clover-container">
         <button class="clover-leaf" onclick="showPage('home')" title="首頁">💚</button>
         <button class="clover-leaf" onclick="showPage('about')" title="關於我">💚</button>
         <button class="clover-leaf" onclick="showPage('projects')" title="作品集">💚</button>
         <button class="clover-leaf" onclick="showPage('about')" title="關於我">💚</button>
         </div>
-
-
-            <script>
-            function leafClicked(num) {
-            alert(`你點擊了葉片 ${num}`);
-            }
-
-            const leaves = document.querySelectorAll('.clover-leaf');
-            leaves.forEach((leaf) => {
-            leaf.addEventListener('click', () => {
-                leaves.forEach(l => l.classList.remove('active'));
-                leaf.classList.add('active');
-            });
-            });
-            </script>
-
-
     </aside>
-
-
     <main id="content">
-      <section id="home" class="page active">
-        <h2>歡迎來到我的履歷網站</h2>
-        <p>這裡展示我的經歷、專案與聯絡方式。</p>
-      </section>
+        <section id="home" class="page active">
+          <h1>自我介紹</h1>
+          <p>這裡展示我的經歷、專案與聯絡方式。</p>
+          <p>我是一名目前正在就讀輔仁大學資訊管理學系的大三學生，性格活潑開朗，勇於創新。我喜歡將生活安排的很充實，體驗各種新事物，也很注重效率和時間規劃。</p>
+        </section>
 
-      <section id="about" class="page">
-        <h2>關於我</h2>
-        <p>我是一位熱愛開發的資管系學生，具備 HTML、Python 基礎。</p>
-      </section>
+        <section id="about" class="page">
+          <div class="main">
+            
+            <div class="card-study">
+              <h2>學經歷時間軸</h2>
+              <div class="main-area">
+                <div class="card-timeline left" >
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <h3>輔仁大學 資訊管理學系</h3>
+                      <span>2022 - 2026（預計）</span>
+                      <p>主修程式設計、網頁設計、管理資訊系統、巨量資料分析。</p>
+                    </div>
 
-      <section id="projects" class="page">
-        <h2>作品集</h2>
-        <ul>
-          <li>詐騙檢測系統 (Python + Firebase)</li>
-          <li>靜態履歷網站 (GitHub Pages)</li>
-        </ul>
-      </section>
+                    <div class="timeline-item">
+                      <h3>臺北市立大同高級中學</h3>
+                      <span>2019 - 2022</span>
+                      <p>社會組，擔任班級幹部，參與各種社團。</p>
+                    </div>
 
-      <section id="contact" class="page">
-        <h2>聯絡我</h2>
-        <p>Email: example@gmail.com</p>
-        <p>GitHub: github.com/yourname</p>
-      </section>
+                    <div class="timeline-item">
+                      <h3>臺北市弘道國民中學</h3>
+                      <span>2016 - 2019</span>
+                      <p>曾參加數理資優培訓，擔任童軍團小隊長</p>
+                    </div>
+
+                    <div class="timeline-item">
+                      <h3>國小</h3>
+                      <span>2010 - 2016</span>
+                      <p>在中國念書</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-timeline" >
+                  <div class="timeline">
+                    <div class="timeline-item">
+                      <h3>輔仁大學 資訊管理學系</h3>
+                      <span>2021 - 2025（預計）</span>
+                      <p>主修資訊系統與資料分析，擔任系學會會長。</p>
+                    </div>
+
+                    <div class="timeline-item">
+                      <h3>XYZ科技股份有限公司（實習）</h3>
+                      <span>2024 夏季實習</span>
+                      <p>參與內部網站維護與資料清洗任務，學習前後端協作。</p>
+                    </div>
+
+                    <div class="timeline-item">
+                      <h3>臺北市立中山高級中學</h3>
+                      <span>2018 - 2021</span>
+                      <p>自然組，擔任班級幹部，參與資訊社。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="page">
+          <h2>作品集</h2>
+          <ul>
+            <li>詐騙檢測系統 (Python + Firebase)</li>
+            <li>靜態履歷網站 (GitHub Pages)</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="page">
+          <h2>聯絡我</h2>
+          <p>Email: example@gmail.com</p>
+          <p>GitHub: github.com/yourname</p>
+        </section>
     </main>
   </div>
 
