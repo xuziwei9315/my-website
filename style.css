@@ -3,13 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
   color: #444;
 }
-
 header {
   display: flex;
   align-items: center;
@@ -23,7 +21,6 @@ header {
   width: 40px;
   height: 40px;
 }
-
 .container {
   display: flex;
   min-height: 100vh;
@@ -40,116 +37,28 @@ header {
   position: relative;
   transition: all 0.3s;
 }
-
-.menu-wrapper {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 2rem auto;
-}
-
-.menu-main {
-  width: 60px;
-  height: 60px;
-  background-color: #28a745;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 60px;
-  font-size: 24px;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.clover-btn {
-  width: 40px;
-  height: 40px;
-  background-color: #ffc107;
-  border: none;
-  border-radius: 50%;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  transform: translate(0, 0);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-  z-index: 1;
-}
-
-.menu-wrapper.active .top {
-  transform: translate(0, -80px);
-  opacity: 1;
-}
-.menu-wrapper.active .right {
-  transform: translate(80px, 0);
-  opacity: 1;
-}
-.menu-wrapper.active .bottom {
-  transform: translate(0, 80px);
-  opacity: 1;
-}
-.menu-wrapper.active .left {
-  transform: translate(-80px, 0);
-  opacity: 1;
-}
-
-
 .avatar {
   width: 100px;
   border-radius: 50%;
   display: block;
   margin: 1rem auto;
 }
-
 .profile {
   text-align: center;
-}
-
-.menu button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  margin-top: 0.5rem;
-  background: none;
-  border: none;
-  color: white;
-  text-align: left;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.menu button:hover {
-  background-color: #495057;
-}
-
-.toggle-btn {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: #007bff;
-  border: none;
-  color: white;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
 main {
   flex-grow: 1;
   padding: 2rem;
 }
-
 .page {
   display: none;
 }
-
 .page.active {
   display: block;
 }
+
+
 .clover-container {
   position: relative;
   width: 320px;
@@ -157,7 +66,6 @@ main {
   margin: 2rem auto; /* 水平置中 */
   user-select: none;
 }
-
 .clover-leaf {
   position: absolute;
   background: transparent;
@@ -172,65 +80,114 @@ main {
   color: #228B22;
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
 }
-
 /* 懸浮和點擊浮起 */
 .clover-leaf:hover,
 .clover-leaf.active {
   transform: translateY(-10px) scale(1.2);
   filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)) brightness(1.2);
 }
-
 /* 四片葉子位置和旋轉（尖尖朝中間） */
 .clover-leaf:nth-child(1) {
   top: 0;
   transform: rotate(-45deg);
 }
-
 .clover-leaf:nth-child(2) {
   top: 0;
   right: 100px;
   transform: rotate(45deg);
 }
-
 .clover-leaf:nth-child(3) {
   bottom: 0;
   transform: rotate(-135deg);
 }
-
 .clover-leaf:nth-child(4) {
   bottom: 0;
   right: 100px;
   transform: rotate(135deg);
 }
 
-
-/* 響應式設計 */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .menu {
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .menu button {
-    font-size: 0.9rem;
-  }
-
-  .profile, .toggle-btn {
-    display: none;
-  }
+.main-area{
+   display: grid;
+  grid-template-columns: 400px 400px; /* 欄，每欄寬 200px */
+  grid-template-rows: 200px 100px;          /* 兩列，每列高 100px */
+  gap: 100px;                                 /* 欄列間距 */
 }
-/* RWD: 螢幕小於 768px (手機) */
+.card-study{
+  background-color: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      transform: translateY(0);
+}
+.card-study:hover {
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+      transform: translateY(-10px);
+    }
+
+/* 時間軸 */
+h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      padding-left: 40px;
+      border-left: 3px solid #4CAF50;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -12px;
+      width: 16px;
+      height: 16px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #4CAF50;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .timeline-item span {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .timeline-item p {
+      margin: 5px 0 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 20px;
+      }
+
+      .timeline-item {
+        padding-left: 15px;
+      }
+
+      .timeline-item::before {
+        left: -10px;
+      }
+    }
+
 @media (max-width: 768px) {
   body {
     flex-direction: column;
